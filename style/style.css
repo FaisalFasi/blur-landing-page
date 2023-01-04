@@ -58,7 +58,8 @@ body {
 }
 .icons-deco {
   max-width: 90%;
-  height: 300px;
+  padding: 4rem 2rem;
+  /* height: 300px; */
   margin: auto;
   text-align: center;
   flex-direction: row;
@@ -82,13 +83,15 @@ h3 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: auto;
 
-  padding: 4rem 1rem;
+  padding: 5rem 8rem;
   gap: 20px;
 }
 .about-us-flex > * {
   flex: 1;
+}
+.about-us-icon {
+  text-align: center;
 }
 
 .about-us-content > h3 {
@@ -96,19 +99,53 @@ h3 {
   padding-bottom: 20px;
 }
 
-
 footer {
-  text-align: center;
-  text-justify: auto;
-  height: 50px;
+  padding: 2.2rem;
+
   background-color: #333333;
 }
-@media (max-width: 560px) {
-  img {
-    height: 50vh;
+
+.center-text {
+  margin: 0;
+  text-align: center;
+}
+@media (max-height: 500px) {
+  .content {
+    top: 0;
+    margin-top: 5px;
+  }
+
+  .icons-deco {
+    flex-direction: column;
+  }
+  .icons-deco > div {
+    padding: 1rem;
   }
   .about-us-flex {
     flex-direction: column;
     padding: 20px;
+  }
+  .content > div {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .icons-deco {
+    flex-direction: column;
+  }
+  .icons-deco > div {
+    padding: 1rem;
+  }
+  .about-us-flex {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .content > div {
+    display: none;
+  }
+  .content .logo {
+    width: 100px;
+    height: 100px;
+    transition: all 1000ms;
   }
 }
